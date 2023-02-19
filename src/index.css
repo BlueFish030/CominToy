@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --s: 16.5px;
+  --_g: #0000 83%,rgba(255, 237, 118, 0.733) 85% 99%,#0000 101%;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(242, 253, 255);
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(16, 25, 53, 1);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+#startBtn{
+  color: rgba(16, 25, 53, 1);
+  font-size: 24px;
+  background-color: rgb(242, 253, 255);
+  width: 10%;
+  height: 10%;
+  min-width: 160px;
+  min-height: 90px;
+  border-radius: 15px;
+  border: 3px solid rgb(86, 71, 135);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+#startBtn:hover{
+  background-color: rgb(255, 255, 255);
+  border: 3px solid rgb(161, 144, 219);
+  box-shadow: 5px 5px black;
+}
+
+.ani{
+  animation: fadeOut 1s forwards;
+
+}
+@keyframes fadeOut {
+  from{
+    opacity: 1;
+  }
+
+  to{
+    opacity: 0;
+  }
+}
+.none{
+  display: none;
+}
+
+.gameDesk{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardBack{
+  min-width: 130px;
+  min-height: 200px;
+  background-color: rgb(9, 40, 71);
+  background: linear-gradient(to right, rgb(28, 62, 95)-15%, rgb(9, 40, 71));
+  box-shadow: -2px 0 8px rgba(0, 24, 48, 0.7);
+  border: 1px solid rgba(254, 228, 64, 1);
+  border-radius: 0.7rem;
+  transform: rotate(90deg);
+  margin: -85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardBackInner{
+  width: 80%;
+  height: 87%;
+  border-radius: 0.7rem;
+  border: 1px solid rgba(155, 93, 229, .8);
+  background:
+      radial-gradient(27% 29% at right ,var(--_g)) calc(var(--s)/ 2) var(--s),
+      radial-gradient(27% 29% at left  ,var(--_g)) calc(var(--s)/-2) var(--s),
+      radial-gradient(29% 27% at top   ,var(--_g)) 0 calc(var(--s)/ 2),
+      radial-gradient(29% 27% at bottom,var(--_g)) 0 calc(var(--s)/-2)
+      #476074;
+    background-size: calc(2*var(--s)) calc(2*var(--s));
+}
+
+.p1{
+  height: 100%;
+  width: 20%;
+  min-width: 220px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  left: -130px;
+  z-index: -1;
+}
+.middle{
+  height: 100%;
+  width: 40%;
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+}
+.p2{
+  height: 100%;
+  width: 20%;
+  min-width: 220px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  right: -130px;
+  z-index: -1;
+}
+
+.drawBtn{
+  font-size: 1.5rem;
+  width: 180px;
+  height: 100px;
+  border: 2px solid rgb(0, 245, 212);
+  border-radius: 10px;
+  margin: auto;
+}
+
+.pickCard{
+  width: 130px;
+  height: 200px;
+  background-color: rgb(9, 40, 71);
+  background: linear-gradient(to right, rgb(28, 62, 95)-15%, rgb(9, 40, 71));
+  box-shadow: -2px 0 8px rgba(0, 24, 48, 0.7);
+  border: 1px solid rgba(254, 228, 64, 1);
+  border-radius: 0.7rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.counterNum{
+  width: 130px;
+  height: 200px;
+  background-color: rgb(255, 255, 255);
+  background: linear-gradient(to top right, rgb(255, 251, 227)15%, rgb(255, 255, 255));
+  box-shadow: -2px 0 8px rgba(0, 24, 48, 0.7);
+  border: 1px solid rgb(9, 40, 71);
+  border-radius: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
